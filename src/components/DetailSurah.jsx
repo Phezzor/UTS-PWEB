@@ -63,7 +63,7 @@ function DetailSurah() {
   }, [selectedReciter, surahId]);
 
   useEffect(() => {
-    fetch("http://api.alquran.cloud/v1/quran/en.asad")
+    fetch("https://api.alquran.cloud/v1/quran/en.asad")
       .then((response) => response.json())
       .then((data) => {
         const surahTranslation = data.data.surahs.find((s) => s.number.toString() === surahId);
