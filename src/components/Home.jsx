@@ -7,10 +7,7 @@ import { MdHome } from "react-icons/md";
 function Home() {
   const [surah, setSurah] = useState([]);
   const [juzs, setJuzs] = useState([]);
-  const [selectedJuz, setSelectedJuz] = useState(() => {
-    const stored = localStorage.getItem("selectedJuz");
-    return stored ? parseInt(stored) : null;
-  });
+  const [selectedJuz, setSelectedJuz] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
@@ -32,12 +29,6 @@ function Home() {
       })
       .catch((error) => console.error("Error fetching juzs:", error));
   }, []);
-
-  useEffect(() => {
-    if (selectedJuz !== null) {
-      localStorage.setItem("selectedJuz", selectedJuz);
-    }
-  }, [selectedJuz]);
 
   const filteredSurah = surah.filter((s) => {
     const inJuz = selectedJuz
