@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { MdHome } from "react-icons/md";
 
 
-function Home() {
+function home() {
   const [surah, setSurah] = useState([]);
   const [juzs, setJuzs] = useState([]);
   const [selectedJuz, setSelectedJuz] = useState(() => {
@@ -153,4 +153,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default home;
