@@ -1,0 +1,13 @@
+.arabic-number {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 2px solid #f4f2c3;  /* Warna border emas */
+    border-radius: 100%;
+    background: #52473f;  /* Hijau tua transparan */
+    color: #ffff;  /* Warna emas */
+    font-weight: semibold;
+    font-size: 0.80rem;
+    text-align: center;
+    margin-left: 8px;
+    box-shadow: 0 0 8px #f4f2c3; /* Efek glow emas */
+}
